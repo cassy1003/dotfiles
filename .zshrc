@@ -5,10 +5,9 @@ alias la=" ls -G --color=auto -la "
 alias ll=" ls -G --color=auto -l "
 alias ls=" ls --color=auto "
 alias pd=" cd "
-alias vzsh="vim ~/.zshrc "
-alias vbash="vim ~/.bashrc "
-alias vvim="vim ~./vimrc "
 
+alias cdw="cd /var/www/"
+alias apache="sudo /etc/init.d/apache2 "
 alias ssh-agent-add=' ssh-agent zsh; ssh-add'
 #git rm `gits | grep deleted | awk '{print $3}'`
 
@@ -29,7 +28,7 @@ alias  gdifvim=" git diff | vim - "
 alias gits_del=" st | grep deleted | awk '{print $3}' "
 
 ### svn ###
-alias svn=colorsvn
+#alias svn=colorsvn
 
 
 ### screen ###
@@ -38,8 +37,21 @@ alias scl=" screen -ls"
 alias scr=" screen -r"
 alias scs=" screen -S"
 
+### node | npm ###
+alias  ex="express -e "
+alias lex="sudo npm link express"
+
+alias mongo="/usr/local/bin/mongodb/bin/mongo"
+alias mongod="/usr/local/bin/mongodb/bin/mongod -dbpath db > db/logfile/`date '+%F'` &"
+
 ### vim ###
 #alias vi=" vim "
+alias vim="/usr/bin/vim"
+
+## vim dot_rc files ##
+alias vzsh="vim ~/.zshrc "
+alias vbash="vim ~/.bashrc "
+alias vvim="vim ~./vimrc "
 
 ############################# user dictionary ######################
 #php.log
@@ -63,11 +75,11 @@ chpwd() { ls }
 #PROMPT=$'%{%B%}%{\e[35m%}%n[%T] # %}%{%b%}'
 #RPROMPT=$'%{\e[32m%}%/%}%{\e[39m%}'
 #PROMPT=$'%B%F%{\e[32m%}%* ('$(sysctl -n vm.loadavg | perl -anpe '$_=$F[1]')$')%m $ %f%b'
+autoload -U colors; colors
 PROMPT=$'%B%F%{\e[0;35m%}%m : %~%f%b'$'\n# '
 export LS_COLORS='no=00:fi=00:di=01;37:ln=04:pi=40;33:so=40;33:bd=40;33:cd=40;33:ex=01;31:or=04:ow=01;37:tw=01;37'
 # change color by ur status when u state git branch
 # load ${fg[...]} and $reset_color
-autoload -U colors; colors
 
 function rprompt-git-current-branch {
     local name st color
@@ -97,13 +109,16 @@ setopt prompt_subst
 #RPROMPT=$'%B%F%{\e[44;01m[%}%f%b `rprompt-git-current-branch` %~]%B%F%{\e[44;01m\]%}%f%b'
 RPROMPT=$'%B%F%{\e[40;01m%}[%f%b`rprompt-git-current-branch`%B%F]%f%b' # `rprompt-git-current-branch` %~]%B%F%{\e[44;01m\]%}%f%b'
 #RPROMPT='[`rprompt-git-current-branch`%~]'
-source ~/.nvm/nvm.sh
+#source ~/.nvm/nvm.sh
 
-export NODE_PATH=$HOME/.node_libraries:$PATH
+#export NODE_PATH=$HOME/.node_libraries:$PATH
+export PATH=/user/bin:$PATH
+export PATH=/user/local/bin:$PATH
+export PASH=/user/lib:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/proton/src/server/node_modules/.bin:$HOME/bin:/usr/local/bin:$PATH
 export MANPATH=$HOME/share/man:$MANPATH
 #export PROMPT_COMMAND='echo -ne "\033"'0;${OLDPWD##/*/}//${PWD##/*/}\007"''"
+export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:/usr/include:$LD_LIBRARY_PATH
 ################################################### end
 
  ################################################### w3m
