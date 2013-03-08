@@ -20,9 +20,13 @@ fi
 
 source ~/.nvm/nvm.sh
 
-export NODE_PATH=$HOME/.node_libraries:$PATH
-#export PATH=$HOME/bin:$PATH
-export PATH=$HOME/proton/src/server/node_modules/.bin:$HOME/bin:/usr/local/bin:$PATH
+#export NODE_PATH=$HOME/.node_libraries:$PATH
+export PATH=$HOME/bin:$PATH
+#export PYTHONHOME=$HOME/local
+export PYTHONPATH=$HOME/local/lib/python:$HOME/local/lib/python/site-packages
+export LD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib
+export LIBRARY_PATH=$HOME/local/lib
+#export PATH=$HOME/proton/src/server/node_modules/.bin:$HOME/bin:/usr/local/bin:$PATH
 export MANPATH=$HOME/share/man:$MANPATH
 export PROMPT_COMMAND='echo -ne "\033]0;${OLDPWD##/*/}//${PWD##/*/}\007"'
 #export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
@@ -30,12 +34,15 @@ export PROMPT_COMMAND='echo -ne "\033]0;${OLDPWD##/*/}//${PWD##/*/}\007"'
 ################ alias ################################
 #alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 ### general ###
-#alias ll=" ls -G --color=auto -l "
-#alias ll=" ls -G --color=auto -l "
-#alias lla=" ls -G --color=auto -la "
+alias ll=" ls -G --color=auto -l "
+alias ll=" ls -G --color=auto -l "
+alias lla=" ls -G --color=auto -la "
 #alias ls=" ls -G --color=auto "
 #alias ls=" ls -G --color=auto "
 #alias pd=" cd "
+
+alias cdw="cd /var/www/"
+alias apache="sudo /etc/init.d/apache2 "
 
 alias ssh-agent-add=' ssh-agent zsh; ssh-add'
 #git rm `gits | grep deleted | awk '{print $3}'`
@@ -46,11 +53,11 @@ alias      gad=" git add"
 alias     gcom=" git commit"
 alias      gbr=" git branch"
 alias     gcho=" git checkout"
-alias    gpull=" git pull"
-alias    gpush=" git push"
-alias      glg=" git log"
+alias     gpul=" git pull"
+alias     gpus=" git push"
+alias     glog=" git log"
 alias   glgvim=" git log -p | vim - "
-alias     gdif=" git diff "
+alias      gdf=" git diff "
 alias  gdifvim=" git diff | vim - "
 #gits | grep deleted | awk '{print $3}'
 alias gits_del=" st | grep deleted | awk '{print $3}' "
@@ -65,9 +72,20 @@ alias scl=" screen -ls"
 alias scr=" screen -r"
 alias scs=" screen -S"
 
+### node | npm ###
+alias  ex="express -e "
+alias lex="sudo npm link express"
+
 ### vim ###
 #alias vi=" vim "
+alias vim="/usr/bin/vim"
 
+### setting rc file ###
+alias  vvim="vim ~/.vimrc"
+alias vbash="vim ~/.bashrc"
+alias  vzsh="vim ~/.zshrc"
+
+alias ethna="$HOME/local/lib/php/Ethna/bin/ethna.sh"
 ############################# user dictionary ######################
 #php.log
 alias phplog='tail -f /var/log/php.log'
@@ -76,12 +94,13 @@ alias phplog='tail -f /var/log/php.log'
 alias hack=' sudo -u admin ssh'
 ############################################################################
 
+export LSCOLORS=gxfxcxdxbxegedabagacad
 ########## languagutf8
 #export LANG=ja_JP.UTF-8
 ########## grep ##########
-find-grep () { find . -type f -print | xargs grep -n --binary-files=without-match $@ }
+#find-grep () { find . -type f -print | xargs grep -n --binary-files=without-match $@ }
 ########## auto ls after cd ########
-#function cd() {
-#	builtin cd $@
-#	ls
-#}
+function cd() {
+  builtin cd $@
+  ls
+}
