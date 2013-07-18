@@ -114,30 +114,34 @@ set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'Shougo/neobundle.vim'
-" solarized カラースキーム
+" solarized colorscheme
 NeoBundle 'altercation/vim-colors-solarized'
-" mustang カラースキーム
+" mustang colorscheme
 NeoBundle 'croaker/mustang-vim'
-" wombat カラースキーム
+" wombat colorscheme
 NeoBundle 'jeffreyiacono/vim-colors-wombat'
-" jellybeans カラースキーム
+" jellybeans colorscheme
 NeoBundle 'nanotech/jellybeans.vim'
-" lucius カラースキーム
+" lucius colorscheme
 NeoBundle 'vim-scripts/Lucius'
-" zenburn カラースキーム
+" zenburn colorscheme
 NeoBundle 'vim-scripts/Zenburn'
-" mrkn256 カラースキーム
+" mrkn256 colorscheme
 NeoBundle 'mrkn/mrkn256.vim'
-" railscasts カラースキーム
+" railscasts colorscheme
 NeoBundle 'jpo/vim-railscasts-theme'
-" pyte カラースキーム
+" pyte colorscheme
 NeoBundle 'therubymug/vim-pyte'
-" molokai カラースキーム
+" molokai colorscheme
 NeoBundle 'tomasr/molokai'
 
-" カラースキーム一覧表示に Unite.vim を使う
+" use Unite.vim for colorsheme
+" :Unite colorscheme -auto-preview
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+" auto completion
+NeoBundle 'Shougo/neocomplcache.vim'
 
 filetype indent plugin on
 syntax on
