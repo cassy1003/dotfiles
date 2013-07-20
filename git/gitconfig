@@ -1,0 +1,11 @@
+# git config --global user.name name
+# git config --global user.email mail@address
+[user]
+	name = cassy1003
+	email = mail.cassy@gmail.com
+# git config --global color.ui true
+[color]
+	ui = true
+# git config --global core.editor 'vim -c "set fenc=utf-8"'
+[core]
+	editor = vim -c \"set fenc=utf-8\"
