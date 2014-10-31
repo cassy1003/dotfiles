@@ -121,6 +121,7 @@ filetype plugin indent on
 "----------------------------------------------------
 "neobundle setting
 "https://github.com/Shougo/neobundle.vim
+" :NeoBundleInstall
 "----------------------------------------------------
 "----------------------------------------------------
 "----------------------------------------------------
@@ -129,31 +130,31 @@ set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'Shougo/neobundle.vim'
-" solarized colorscheme
-NeoBundle 'altercation/vim-colors-solarized'
-" mustang colorscheme
-NeoBundle 'croaker/mustang-vim'
-" wombat colorscheme
-NeoBundle 'jeffreyiacono/vim-colors-wombat'
-" jellybeans colorscheme
-NeoBundle 'nanotech/jellybeans.vim'
-" lucius colorscheme
-NeoBundle 'vim-scripts/Lucius'
-" zenburn colorscheme
-NeoBundle 'vim-scripts/Zenburn'
-" mrkn256 colorscheme
-NeoBundle 'mrkn/mrkn256.vim'
-" railscasts colorscheme
-NeoBundle 'jpo/vim-railscasts-theme'
-" pyte colorscheme
-NeoBundle 'therubymug/vim-pyte'
-" molokai colorscheme
-NeoBundle 'tomasr/molokai'
-
-" use Unite.vim for colorsheme
-" :Unite colorscheme -auto-preview
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
+""" solarized colorscheme
+""NeoBundle 'altercation/vim-colors-solarized'
+""" mustang colorscheme
+""NeoBundle 'croaker/mustang-vim'
+""" wombat colorscheme
+""NeoBundle 'jeffreyiacono/vim-colors-wombat'
+""" jellybeans colorscheme
+""NeoBundle 'nanotech/jellybeans.vim'
+""" lucius colorscheme
+""NeoBundle 'vim-scripts/Lucius'
+""" zenburn colorscheme
+""NeoBundle 'vim-scripts/Zenburn'
+""" mrkn256 colorscheme
+""NeoBundle 'mrkn/mrkn256.vim'
+""" railscasts colorscheme
+""NeoBundle 'jpo/vim-railscasts-theme'
+""" pyte colorscheme
+""NeoBundle 'therubymug/vim-pyte'
+""" molokai colorscheme
+""NeoBundle 'tomasr/molokai'
+""
+""" use Unite.vim for colorsheme
+""" :Unite colorscheme -auto-preview
+""NeoBundle 'Shougo/unite.vim'
+""NeoBundle 'ujihisa/unite-colorscheme'
 
 " auto completion
 NeoBundle 'Shougo/neocomplcache.vim'
