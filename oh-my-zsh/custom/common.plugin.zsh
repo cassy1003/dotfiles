@@ -39,7 +39,6 @@ alias apache="sudo /etc/init.d/apache"
 
 # php
 alias phplog='tail -f /var/log/php.log'
-alias phpunit='sudo -u www-data /home/gree/common/php/bin//phpunit'
 
 #-------------------------
 #--------- source --------
