@@ -38,10 +38,10 @@ local git_info='$(git_prompt_info)'
 
 
 PROMPT="%{$FG[239]%}────────────────────%{$reset_color%}
-%{$FG[040]%}╭─%{$reset_color%}%{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[226]%}${current_dir}%{$FG[033]%}${git_info} %{$FG[239]%}: %n at $(box_name)%{$reset_color%} $(virtualenv_info)
-%{$FG[040]%}╰─%{$reset_color%}%}"
+%{$FG[040]%}- %{$reset_color%}%{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[226]%}${current_dir}%{$FG[033]%}${git_info} %{$FG[239]%}: %n at $(box_name)%{$reset_color%} $(virtualenv_info)
+%{$FG[040]%}>>%{$reset_color%}%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}on%{$reset_color%} %{$FG[033]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$FG[202]%}✘✘✘"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[040]%}✔"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$FG[202]%}xxx"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[040]%}o"
