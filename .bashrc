@@ -104,3 +104,4 @@ function cd() {
   builtin cd $@
   ls
 }
+export PATH="$HOME/.rbenv/bin:$PATH"

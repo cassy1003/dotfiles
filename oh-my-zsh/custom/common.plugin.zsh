@@ -5,7 +5,8 @@
 alias la="ls -la "
 alias ll="ls -l "
 alias cl="clear"
-alias vzsh="vim ~/.zshrc "
+alias vzsh="vim ~/.oh-my-zsh/custom/common.plugin.zsh "
+alias vzshalias="vim ~/.oh-my-zsh/custom/alias.plugin.zsh "
 alias vbash="vim ~/.bashrc "
 alias vvim="vim ~/.vimrc "
 
@@ -26,10 +27,10 @@ alias     gsu=" git submodule update "
 alias    gsur=" git submodule update --recursive"
 
 # screen
-alias  sc=" screen"
+alias  sc=" screen -U"
 alias scl=" screen -ls"
-alias scr=" screen -r"
-alias scs=" screen -S"
+alias scr=" screen -U -r"
+alias scs=" screen -U -S"
 
 # vim
 #alias vi=" vim "
@@ -39,7 +40,6 @@ alias apache="sudo /etc/init.d/apache"
 
 # php
 alias phplog='tail -f /var/log/php.log'
-alias phpunit='sudo -u www-data /home/gree/common/php/bin//phpunit'
 
 #-------------------------
 #--------- source --------
