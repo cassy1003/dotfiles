@@ -6,7 +6,6 @@ alias la="ls -la "
 alias ll="ls -l "
 alias cl="clear"
 alias vzsh="vim ~/.oh-my-zsh/custom/common.plugin.zsh "
-alias vzshalias="vim ~/.oh-my-zsh/custom/alias.plugin.zsh "
 alias vbash="vim ~/.bashrc "
 alias vvim="vim ~/.vimrc "
 
@@ -21,10 +20,11 @@ alias    gpus=" git push"
 alias    glog=" git log"
 alias glogvim=" git log -p | vim - "
 alias     gdf=" git diff "
+alias    gdfc=" git diff --cached"
 alias    gdfl=" git diff | lv"
 alias    gdfv=" git diff | vim - "
-alias     gsu=" git submodule update "
-alias    gsur=" git submodule update --recursive"
+alias    gsub=" git submodule update "
+alias   gsubr=" git submodule update --recursive"
 
 # screen
 alias  sc=" screen -U"
@@ -37,25 +37,29 @@ alias scs=" screen -U -S"
 
 # apache
 alias apache="sudo /etc/init.d/apache"
+# httpd
+alias httpd="sudo /etc/rc.d/init.d/httpd"
 
 # php
 alias phplog='tail -f /var/log/php.log'
 
 #-------------------------
-#--------- source --------
-#-------------------------
-source ~/.nvm/nvm.sh
-
-#-------------------------
 #--------- export --------
 #-------------------------
-export NODE_PATH=/usr/lib/nodejs:$HOME/.node_libraries:$PATH
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=/usr/pgsql-9.4/bin:$PATH
 export MANPATH=$HOME/share/man:$MANPATH
 
 export HISTSIZE=1000
 
 #export LANG=ja_JP.UTF-8
+
+#-------------------------
+#--------- source --------
+#-------------------------
+#source ~/.nvm/nvm.sh
+eval "$(rbenv init - zsh)"
 
 #-------------------------
 #--------- command -------
