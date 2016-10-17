@@ -1,0 +1,7 @@
+defutf8 on
+defencoding utf8
+encoding utf-8 utf-8
+
+escape ^d^d
+hardstatus alwayslastline '%L=%{= kw} %-w%46>%{=u .r}%n:%t%{= .w}%+w%-30=%{= .y}[%H] %{= kw}%02c:%s'
+autodetach on
