@@ -44,6 +44,9 @@ alias httpd="sudo /etc/rc.d/init.d/httpd"
 # php
 alias phplog='tail -f /var/log/php.log'
 
+# ssh
+alias vsshconf="vim ~/.ssh/config"
+
 #-------------------------
 #--------- export --------
 #-------------------------
